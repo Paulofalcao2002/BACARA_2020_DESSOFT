@@ -52,7 +52,12 @@ while game_on:
         if lista_quem_aposta[i] == 'banco': lista_fichas_jogadores[i] = aposta_banco(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
         if lista_quem_aposta[i] == 'empate': lista_fichas_jogadores[i] = aposta_empate(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
     
-    print(f'Seu número de fichas é {fichas}')
+    #Atualizando as variaveis globais dos jogadores após o resultado da rodada
+    quantos_jogadores, numero_jogadores, lista_fichas_jogadores, string_eliminados = atualiza_fichas(quantos_jogadores, numero_jogadores, lista_fichas_jogadores)
+
+    #Imprimindo as fichas para os jogadores
+    for i in range(quantos_jogadores):
+        print(f'Jogador {numero_jogadores[i]}, você tem {lista_fichas_jogadores[i]} fichas ao final da rodada!')
 
     if fichas_zeraram(fichas):
         print('Suas fichas acabaram!')
