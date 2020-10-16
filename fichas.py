@@ -42,3 +42,10 @@ def aposta_empate(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_ba
     else:
         fichas -= fichas_apostadas
         return fichas
+  
+#função que atualiza as variaveis globais após a rodada
+def atualiza_fichas(jogadores, numero_jogadores, lista_fichas):
+    i = 0
+    lista_fichas_nova = []
+    numero_jogadores_novo = []
+    string_eliminados = []
