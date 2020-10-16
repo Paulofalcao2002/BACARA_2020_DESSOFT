@@ -32,14 +32,12 @@ while game_on:
         lista_quem_aposta.append(quem_aposta)
         fichas_apostadas = int(input(f"Jogador {numero_jogadores[i]}, quantas fichas você deseja apostar? "))
         lista_fichas_apostadas.append(fichas_apostadas)
-
+    
+    #Sorteando as cartas do jogador e banco
     carta1_jogador, valor1_jogador = sorteia_carta(quantos_baralhos, baralho)
     carta2_jogador, valor2_jogador = sorteia_carta(quantos_baralhos, baralho)
     carta1_banco, valor1_banco = sorteia_carta(quantos_baralhos, baralho)
-    carta2_banco, valor2_banco = sorteia_carta(quantos_baralhos, baralho)
-    
- texto_jogador, soma_jogador = confere_terceira_carta(valor1_jogador, valor2_jogador, carta1_jogador, carta2_jogador, 'jogador')
-    texto_banco, soma_banco = confere_terceira_carta(valor1_banco, valor2_banco, carta1_banco, carta2_banco, 'banco')
+    carta2_banco, valor2_banco = sorteia_carta(quantos_baralhos, baralho
 
     print(texto_jogador)
     print(texto_banco)
