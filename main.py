@@ -46,11 +46,12 @@ while game_on:
     print(texto_jogador)
     print(texto_banco)
     
-
-    if quem_aposta == 'jogador': fichas = aposta_jogador(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_baralhos)
-    if quem_aposta == 'banco': fichas = aposta_banco(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_baralhos)
-    if quem_aposta == 'empate': fichas = aposta_empate(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_baralhos)
-
+    #Aplicando os ifs e atualizando as fichas dos jogadores depois das apostas
+    for i in range(quantos_jogadores):
+        if lista_quem_aposta[i] == 'jogador': lista_fichas_jogadores[i] = aposta_jogador(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
+        if lista_quem_aposta[i] == 'banco': lista_fichas_jogadores[i] = aposta_banco(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
+        if lista_quem_aposta[i] == 'empate': lista_fichas_jogadores[i] = aposta_empate(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
+    
     print(f'Seu número de fichas é {fichas}')
 
     if fichas_zeraram(fichas):
