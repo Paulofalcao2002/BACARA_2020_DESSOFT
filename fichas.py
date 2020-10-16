@@ -34,3 +34,11 @@ def aposta_banco(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_bar
     else:
         fichas -= fichas_apostadas
         return fichas
+
+def aposta_empate(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_baralhos):
+    if soma_jogador == soma_banco:
+        fichas += (8 * fichas_apostadas) - (retona_comissao(quantos_baralhos)[2] * fichas_apostadas)
+        return int(fichas)
+    else:
+        fichas -= fichas_apostadas
+        return fichas
