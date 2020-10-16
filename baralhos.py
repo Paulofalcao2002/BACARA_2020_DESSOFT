@@ -14,3 +14,12 @@ baralho = {"A de espadas": 1, "A de copas": 1, "A de paus": 1, "A de ouros": 1,
                   "Rainha de espadas": 0, "Rainha de copas": 0, "Rainha de paus": 0, "Rainha de ouros": 0,
                   "Valete de espadas": 0, "Valete de copas": 0, "Valete de paus": 0, "Valete de ouros": 0,
                   "Rei de espadas": 0, "Rei de copas": 0, "Rei de paus": 0, "Rei de ouros": 0}
+
+#função que ajusta a quantidade de baralhos e sorteia as cartas
+def sorteia_carta(n, baralho):
+    lista_baralhos = [baralho] * n
+    i = random.randint(0, n - 1)
+    baralho = lista_baralhos[i]
+
+    carta1_jogador, valor1_jogador = random.choice(list(baralho.items()))
+    return carta1_jogador, valor1_jogador
