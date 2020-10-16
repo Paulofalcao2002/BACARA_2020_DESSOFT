@@ -16,3 +16,7 @@ def confere_terceira_carta_jogador(valor1_jogador, valor2_jogador, carta1_jogado
         soma = retorna_valor_soma(valor1_jogador, valor2_jogador, valor3)
         return f'A soma das cartas do {string} foi de {soma}. ' \
                f'Suas cartas foram {carta1_jogador}, {carta2_jogador} e {carta3}', soma
+     else:
+        soma = retorna_valor_soma(valor1_jogador, valor2_jogador)
+        return f'A soma das cartas do {string} foi de {soma}. ' \
+               f'Suas cartas foram {carta1_jogador} e {carta2_jogador}', soma
