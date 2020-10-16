@@ -25,7 +25,13 @@ while game_on:
     #listas que guardam informacoes dos jogadores referentes a rodada
     lista_quem_aposta = []
     lista_fichas_apostadas = []
-
+ 
+#Preenchendo as listas com valores
+    for i in range(quantos_jogadores):
+        quem_aposta = input(f'Jogador {numero_jogadores[i]}, em quem você deseja apostar? (jogador/banco/empate) ')
+        lista_quem_aposta.append(quem_aposta)
+        fichas_apostadas = int(input(f"Jogador {numero_jogadores[i]}, quantas fichas você deseja apostar? "))
+        lista_fichas_apostadas.append(fichas_apostadas)
 
     carta1_jogador, valor1_jogador = sorteia_carta(quantos_baralhos, baralho)
     carta2_jogador, valor2_jogador = sorteia_carta(quantos_baralhos, baralho)
