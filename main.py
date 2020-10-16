@@ -58,10 +58,14 @@ while game_on:
     #Imprimindo as fichas para os jogadores
     for i in range(quantos_jogadores):
         print(f'Jogador {numero_jogadores[i]}, você tem {lista_fichas_jogadores[i]} fichas ao final da rodada!')
+    
+    #Imprimindo quais jogadores zeraram suas fichas na rodada
+    for i in range(len(string_eliminados)):
+        print(string_eliminados[i])
 
-    if fichas_zeraram(fichas):
-        print('Suas fichas acabaram!')
+    #Códigos que terminam o loop da partida, todos jogadores zerarem ou desistirem de jogar
+    if quantos_jogadores == 0:
+        print('Todos jogadores zeraram suas fichas')
         break
 
-    continua = input("Quer continuar jogando? (sim/não)")
-    if continua == 'não': break
+   
