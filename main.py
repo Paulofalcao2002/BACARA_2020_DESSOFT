@@ -14,6 +14,10 @@ quantos_jogadores = int(input("Quantos jogadores vão participar? "))
 numero_jogadores = []
 lista_fichas_jogadores = []
 
+for i in range(quantos_jogadores):
+    numero_jogadores.append(i + 1)
+    lista_fichas_jogadores.append(fichas)
+    
 game_on = True
 
 while game_on:
