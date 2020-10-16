@@ -18,11 +18,13 @@ for i in range(quantos_jogadores):
     numero_jogadores.append(i + 1)
     lista_fichas_jogadores.append(fichas)
     
+#laço de repetição para gerar as rodadas da partida
 game_on = True
-
 while game_on:
-    quem_aposta = input('Em quem você deseja apostar? (jogador/banco/empate)')
-    fichas_apostadas = int(input("Quantas fichas você deseja apostar? "))
+
+    #listas que guardam informacoes dos jogadores referentes a rodada
+    lista_quem_aposta = []
+    lista_fichas_apostadas = []
 
 
     carta1_jogador, valor1_jogador = sorteia_carta(quantos_baralhos, baralho)
