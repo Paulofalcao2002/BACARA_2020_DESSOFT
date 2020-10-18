@@ -1,3 +1,8 @@
+import os
+from baralhos import sorteia_carta, baralho
+from somas import confere_terceira_carta_jogador, confere_terceira_carta_banco
+from fichas import aposta_jogador, aposta_banco, aposta_empate, atualiza_fichas
+
 print("********")
 print("Bem vindo ao Bacará!")
 print("********")
