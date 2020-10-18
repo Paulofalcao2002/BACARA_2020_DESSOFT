@@ -143,3 +143,13 @@ def atualiza_fichas(jogadores, numero_jogadores, lista_fichas):
     lista_fichas_nova = []
     numero_jogadores_novo = []
     string_eliminados = []
+    while i < len(lista_fichas):
+        if lista_fichas[i] < 1:
+            jogadores -= 1
+            string_eliminados.append(f'Jogador {numero_jogadores[i]}, suas fichas acabaram!')
+        else:
+            lista_fichas_nova.append(lista_fichas[i])
+            numero_jogadores_novo.append(numero_jogadores[i])
+        i += 1
+    return jogadores, numero_jogadores_novo, lista_fichas_nova, string_eliminados
+  
