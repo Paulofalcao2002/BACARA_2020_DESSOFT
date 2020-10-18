@@ -153,3 +153,15 @@ def atualiza_fichas(jogadores, numero_jogadores, lista_fichas):
         i += 1
     return jogadores, numero_jogadores_novo, lista_fichas_nova, string_eliminados
   
+print("********")
+print("Bem vindo ao Bacará!")
+print("********")
+
+fichas = 100
+
+print(f'Todos jogadores começam o jogo com {fichas} fichas. Boa sorte!')
+
+#variaveis que guardam o número de baralhos e jogadores na partida
+quantos_baralhos = int(input("Você quer jogar com quantos baralhos? (1/6/8) "))
+quantos_jogadores = int(input("Quantos jogadores vão participar? "))
+
