@@ -1,4 +1,4 @@
-# EP - Design de Software
+# EP - Design de Software - BACARÁ
 # Equipe: Lorena Budin e Paulo Falcão
 # Data: 18/10/2020
 
