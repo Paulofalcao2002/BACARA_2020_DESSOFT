@@ -193,3 +193,15 @@ while game_on:
             else:
                 lista_fichas_apostadas.append(fichas_apostadas)
                 break
+#Sorteando as cartas do jogador e banco
+carta1_jogador, valor1_jogador = sorteia_carta(quantos_baralhos, baralho)
+carta2_jogador, valor2_jogador = sorteia_carta(quantos_baralhos, baralho)
+carta1_banco, valor1_banco = sorteia_carta(quantos_baralhos, baralho)
+carta2_banco, valor2_banco = sorteia_carta(quantos_baralhos, baralho)
+
+#Utilizando a função que devolve a soma das cartas, adcionando ou não a terceira carta
+texto_jogador, soma_jogador, jogador_recebeu, valor3 = confere_terceira_carta_jogador(valor1_jogador, valor2_jogador, carta1_jogador, carta2_jogador, 'jogador', valor1_banco, valor2_banco)
+texto_banco, soma_banco = confere_terceira_carta_banco(valor1_banco, valor2_banco, carta1_banco, carta2_banco, 'banco', jogador_recebeu, valor3)
+
+print(texto_jogador)
+print(texto_banco)
