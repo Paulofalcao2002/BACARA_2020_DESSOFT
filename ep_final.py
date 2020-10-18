@@ -205,3 +205,17 @@ texto_banco, soma_banco = confere_terceira_carta_banco(valor1_banco, valor2_banc
 
 print(texto_jogador)
 print(texto_banco)
+
+#Aplicando os ifs e atualizando as fichas dos jogadores depois das apostas
+for i in range(quantos_jogadores):
+    if lista_quem_aposta[i] == 'jogador': lista_fichas_jogadores[i] = aposta_jogador(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
+    if lista_quem_aposta[i] == 'banco': lista_fichas_jogadores[i] = aposta_banco(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
+    if lista_quem_aposta[i] == 'empate': lista_fichas_jogadores[i] = aposta_empate(soma_jogador, soma_banco, lista_fichas_jogadores[i], lista_fichas_apostadas[i], quantos_baralhos)
+
+
+#Atualizando as variaveis globais dos jogadores após o resultado da rodada
+quantos_jogadores, numero_jogadores, lista_fichas_jogadores, string_eliminados = atualiza_fichas(quantos_jogadores, numero_jogadores, lista_fichas_jogadores)
+
+#Imprimindo as fichas para os jogadores
+for i in range(quantos_jogadores):
+    print(f'Jogador {numero_jogadores[i]}, você tem {lista_fichas_jogadores[i]} fichas ao final da rodada!')
