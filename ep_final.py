@@ -83,4 +83,12 @@ def confere_terceira_carta_banco(valor1_banco, valor2_banco, carta1_banco, carta
             soma = retorna_valor_soma(valor1_banco, valor2_banco, valor3)
             return f'A soma das cartas do {string} foi de {soma}. ' \
                    f'Suas cartas foram {carta1_banco}, {carta2_banco} e {carta3}', soma
+    else:
+            soma = retorna_valor_soma(valor1_banco, valor2_banco)
+            return f'A soma das cartas do {string} foi de {soma}. ' \
+                   f'Suas cartas foram {carta1_banco} e {carta2_banco}', soma
+else:
+     soma = retorna_valor_soma(valor1_banco, valor2_banco)
+     return f'A soma das cartas do {string} foi de {soma}. ' \
+            f'Suas cartas foram {carta1_banco} e {carta2_banco}', soma
           
