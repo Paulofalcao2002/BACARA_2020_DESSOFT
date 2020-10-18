@@ -36,3 +36,12 @@ def retorna_valor_soma(a, b, c = 0):
         return int(numero[1])
     else:
         return (a + b + c)
+
+#funções que conferem a necessidade da terceira carta do jogador e banco, retornando as strings referentes a soma das mesmas
+def confere_terceira_carta_jogador(valor1_jogador, valor2_jogador, carta1_jogador, carta2_jogador, string, valor1_banco, valor2_banco):
+    if retorna_valor_soma(valor1_jogador, valor2_jogador) <= 5 and retorna_valor_soma(valor1_banco, valor2_banco) < 8:
+        jogador_recebeu = True
+        carta3, valor3 = random.choice(list(baralho.items()))
+        soma = retorna_valor_soma(valor1_jogador, valor2_jogador, valor3)
+        return f'A soma das cartas do {string} foi de {soma}. ' \
+               f'Suas cartas foram {carta1_jogador}, {carta2_jogador} e {carta3}', soma, jogador_recebeu, valor3
