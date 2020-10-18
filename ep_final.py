@@ -58,8 +58,15 @@ def confere_terceira_carta_banco(valor1_banco, valor2_banco, carta1_banco, carta
         soma = retorna_valor_soma(valor1_banco, valor2_banco, valor3)
         return f'A soma das cartas do {string} foi de {soma}. ' \
                f'Suas cartas foram {carta1_banco}, {carta2_banco} e {carta3}', soma
+    
     if retorna_valor_soma(valor1_banco, valor2_banco) <= 5 and jogador_recebeu:
         if retorna_valor_soma(valor1_banco, valor2_banco) <= 2:
+            carta3, valor3 = random.choice(list(baralho.items()))
+            soma = retorna_valor_soma(valor1_banco, valor2_banco, valor3)
+            return f'A soma das cartas do {string} foi de {soma}. ' \
+                   f'Suas cartas foram {carta1_banco}, {carta2_banco} e {carta3}', soma
+    
+    if retorna_valor_soma(valor1_banco, valor2_banco) == 3 and valor3_jogador != 8:
             carta3, valor3 = random.choice(list(baralho.items()))
             soma = retorna_valor_soma(valor1_banco, valor2_banco, valor3)
             return f'A soma das cartas do {string} foi de {soma}. ' \
