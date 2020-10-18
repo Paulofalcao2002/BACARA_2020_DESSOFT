@@ -228,3 +228,8 @@ while game_on:
     continua = input("Quer continuar jogando? (sim/não) ")
     if continua == 'não': break
 
+    #limpa o terminal após a rodada
+    if os.name == 'nt':
+        os.system("cls")
+    else:
+        os.system("clear")
