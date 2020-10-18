@@ -15,7 +15,7 @@ print(f'Você começará o jogo com {fichas} fichas. Boa sorte')
 quantos_baralhos = int(input("Você quer jogar com quantos baralhos? (1/6/8) "))
 quantos_jogadores = int(input("Quantos jogadores vão participar? "))
 
-#variaveis que indentificam os jogadores e quanto de fichas eles tem
+#variaveis que indentificam os jogadores e quanto de fichas eles têm
 numero_jogadores = []
 lista_fichas_jogadores = []
 
