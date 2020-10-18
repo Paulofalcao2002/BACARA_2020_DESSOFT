@@ -181,5 +181,5 @@ while game_on:
     lista_quem_aposta = []
     lista_fichas_apostadas = []
 
-    #Preencehndo as listas com valores
+    #Preenchendo as listas com valores
     for i in range(quantos_jogadores):
