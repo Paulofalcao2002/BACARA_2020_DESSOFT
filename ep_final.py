@@ -172,3 +172,14 @@ lista_fichas_jogadores = []
 for i in range(quantos_jogadores):
     numero_jogadores.append(i + 1)
     lista_fichas_jogadores.append(fichas)
+
+#laço de repetição para gerar as rodadas da partida
+game_on = True
+while game_on:
+
+    #listas que guardam informacoes dos jogadores referentes a rodada
+    lista_quem_aposta = []
+    lista_fichas_apostadas = []
+
+    #Preencehndo as listas com valores
+    for i in range(quantos_jogadores):
