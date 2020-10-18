@@ -121,3 +121,10 @@ def aposta_jogador(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_b
         fichas -= fichas_apostadas
         return fichas
 
+def aposta_banco(soma_jogador, soma_banco, fichas, fichas_apostadas, quantos_baralhos):
+    if soma_banco > soma_jogador:
+        fichas += (0.95 * fichas_apostadas) - (retona_comissao(quantos_baralhos)[1] * fichas_apostadas)
+        return int(fichas)
+    else:
+        fichas -= fichas_apostadas
+        return fichas
