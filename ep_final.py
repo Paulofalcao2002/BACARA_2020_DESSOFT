@@ -183,3 +183,13 @@ while game_on:
 
     #Preenchendo as listas com valores
     for i in range(quantos_jogadores):
+        quem_aposta = input(f'Jogador {numero_jogadores[i]}, em quem você deseja apostar? (jogador/banco/empate) ')
+        lista_quem_aposta.append(quem_aposta)
+        numero_valido = True
+        while numero_valido:
+            fichas_apostadas = int(input(f"Jogador {numero_jogadores[i]}, quantas fichas você deseja apostar? "))
+            if fichas_apostadas > lista_fichas_jogadores[i]:
+                print(f'Jogador {numero_jogadores[i]}, você apostou mais fichas do que estão disponiveis!')
+            else:
+                lista_fichas_apostadas.append(fichas_apostadas)
+                break
